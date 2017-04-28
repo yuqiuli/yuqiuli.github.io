@@ -1,42 +1,76 @@
 <!DOCTYPE html>
-
 <html>
-
-<head>
-    <title>Rachel's Cool</title>
-</head>
-
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <body>
-    <marquee behavior="scroll" direction="left"><strong>I AM SUPER COOL</strong></marquee>
-    <img src="/Atlanta_midtown_night.jpg" 
-         alt="Atlanta Skyline!!"
-         img width="100%">
-    
-    <marquee behavior="scroll" direction="left">
-    <img src="http://www.html.am/images/html-codes/marquees/fish-swimming.gif" alt="Swimming fish">
-    </marquee>
-    
-    <h2>WHY AM I SO COOL</h2>
-    <p>Wow <em>I</em> am great</p>
 
-    <h2>Why am I great</h2>
-    <p>because I am cool</p>
-    
-    <h2>WHATS UP WITH MY LIFE RIGHT NOW</h2>
-    <p>#failing STAT 400 wooot</p>
-    <p>#I HAVE MONO!!!</p>
-    
-    <h3>25 April 2017 UPDATE!!</h3>
-    <p> YO homies waddup I know yall missed me </p>
-    <p> Don't have Tuberculosis or Strep Throat!!</p>
-    <p> I'm not dying but yall can watch my GPA die tomorrow at 11 AM!! </p>
-    
-   
-    <h2>Where to find the tutorial</h2>
-    <p><a href="http://www.htmldog.com">HTML Dog</a></p>
-    
-    <img src="http://www.htmldog.com/badge1.gif" width="120" height="90" alt="HTML Dog">
-    
+<div class="w3-container">
+  <h2>Slideshow Caption</h2>
+  <p>Add a caption text for each image slide with the w3-display-* classes (topleft, topmiddle, topright, bottomleft, bottommiddle, bottomright or middle).</p>
+</div>
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="img_fjords.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Trolltunga, Norway
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img_lights.jpg" style="width:100%">
+  <div class="w3-display-bottomright w3-large w3-container w3-padding-16 w3-black">
+    Northern Lights, Norway
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img_mountains.jpg" style="width:100%">
+  <div class="w3-display-topleft w3-large w3-container w3-padding-16 w3-black">
+    Beautiful Mountains
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img_forest.jpg" style="width:100%">
+  <div class="w3-display-topright w3-large w3-container w3-padding-16 w3-black">
+    The Rain Forest
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="img_mountains.jpg" style="width:100%">
+  <div class="w3-display-middle w3-large w3-container w3-padding-16 w3-black">
+    Mountains!
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
 </body>
-
 </html>
